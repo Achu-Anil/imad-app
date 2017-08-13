@@ -20,7 +20,6 @@ var articles = {
                         This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
                 </p>`
     },
-    
         'article-two' : {
         title: 'Article Two | Achu Anil',
         heading: 'Article Two',
@@ -35,7 +34,6 @@ var articles = {
                         This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
                 </p>`
     },
-    
         'article-three' : {
         title: 'Article Three | Achu Anil',
         heading: 'Article Three',
@@ -91,19 +89,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/:articleName', function(req,res) {
+app.get('/:articleSame', function(req,res) {
     //articleNAme == article-one
     //articles[articleName] == {} content object for article-one
-    var articleName = req.params.articleName;
+    var articleName = req.params.articleSame;
     res.send(createTemplate(articles[articleName]));
-});
-
-app.get('/article-two', function(req,res) {
-    res.send(createTemplate(articleTwo));
-});
-
-app.get('/article-three', function(req,res) {
-    res.send(createTemplate(articleThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
