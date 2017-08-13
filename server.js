@@ -5,23 +5,52 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-
-var articleOne = {
-    title: 'Article One | Achu Anil',
-    heading: 'Article One',
-    date: 'Aug 13, 2017',
-    content:`<p>
-                    This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
-            </p>
-            <p>
-                    This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
-            </p>
-            <p>
-                    This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
-            </p>`
+var articles = {
+        articleOne : {
+        title: 'Article One | Achu Anil',
+        heading: 'Article One',
+        date: 'Aug 11, 2017',
+        content:`<p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>
+                <p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>
+                <p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>`
+    },
+    
+        articleTwo : {
+        title: 'Article Two | Achu Anil',
+        heading: 'Article Two',
+        date: 'Aug 12, 2017',
+        content:`<p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>
+                <p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>
+                <p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>`
+    },
+    
+        articleThree : {
+        title: 'Article Three | Achu Anil',
+        heading: 'Article Three',
+        date: 'Aug 13, 2017',
+        content:`<p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>
+                <p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>
+                <p>
+                        This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.This is the content for my article and I like where this is going.
+                </p>`
+    }
 };
-
-
 function createTemplate(data) {
     var title = data.title;
     var date = data.date;
@@ -67,11 +96,11 @@ app.get('/article-one', function(req,res) {
 });
 
 app.get('/article-two', function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+    res.send(createTemplate(articleTwo));
 });
 
 app.get('/article-three', function(req,res) {
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+    res.send(createTemplate(articleThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
