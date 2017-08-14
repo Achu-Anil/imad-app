@@ -1,4 +1,4 @@
-console.log('Loaded');
+console.log('Loaded A');
 
 //Change the text of the main-text div
 var element = document.getElementById('main-text');
@@ -15,5 +15,4 @@ function moveRight() {
 
 img.onclick = function() {
     var interval = setInterval(moveRight,100);
-    img.style.marginLeft = '100px';
 };
