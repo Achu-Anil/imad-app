@@ -17,6 +17,7 @@ var i = 0;
 img.onclick = function() {
     if(i<=3){
         i++;
+        console.log(i);
         var interval = setInterval(moveRight,10);
     }
     else{
