@@ -1,4 +1,4 @@
-console.log('Loaded');
+console.log('Loaded a');
 
 //Change the text of the main-text div
 var element = document.getElementById('main-text');
