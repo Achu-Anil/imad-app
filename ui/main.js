@@ -13,6 +13,12 @@ function moveRight() {
     marginLeft = marginLeft + 1;
     img.style.marginLeft = marginLeft + 'px';
 }
+
+function moveLeft() {
+    marginLeft = marginLeft - 1;
+    img.style.marginLeft = marginLeft + 'px';
+}
+
 var i = 0;
 img.onclick = function() {
     if(i<=3){
@@ -21,6 +27,6 @@ img.onclick = function() {
         var interval = setInterval(moveRight,10);
     }
     else{
-        img.style.marginLeft = 50;
+        interval = setInterval(moveLeft,5);
     }
 };
