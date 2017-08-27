@@ -26,6 +26,6 @@ button.onclick = function() {
     }
 
     //Make the request
-    httpRequest.open('GET', 'http://achuanilsms.imad.hasura-app.io/counter', true);
-    httpRequest.send(null);
+    request.open('GET', 'http://achuanilsms.imad.hasura-app.io/counter', true);
+    request.send(null);
 };
