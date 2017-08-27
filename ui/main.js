@@ -3,7 +3,7 @@ var button = document.getElementById('counter');
 var counter = 0;
 button.onclick = function() {
     
-    //Make a request to the counter endpoint
+    //Create a request object
     var request = new XMLHttpRequest();
     
     
@@ -24,4 +24,8 @@ button.onclick = function() {
         } 
         // Not ready yet.
     }
+
+    //Make the request
+    httpRequest.open('GET', 'http://achuanilsms.imad.hasura-app.io/counter', true);
+    httpRequest.send(null);
 };
