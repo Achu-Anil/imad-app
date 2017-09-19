@@ -84,6 +84,7 @@ function createTemplate(data) {
                 <div>
                     ${date.toDateString()}
                 </div>
+                <br/>
                 <div>
                     ${content}
                 </div>
