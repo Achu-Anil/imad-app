@@ -57,8 +57,8 @@ app.get('/', function (req, res) {
 
 function hash(input,salt) {
     //How do we create a hash?
-    var hash = crypto.pbkdf2(input, salt, 10000, 512, 'sha512');
-    return hash.toString('hex');
+    var hashed = crypto.pbkdf2(input, salt, 10000, 512, 'sha512');
+    return hashed.toString('hex');
 }
 
 app.get('/hash/:input',function(req,res) {
