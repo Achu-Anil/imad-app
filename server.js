@@ -131,7 +131,7 @@ app.post('/check-login', funciton(req,res) {
         res.send('You are logged in:'+req.session.auth.userId.toString());
     }
     else {
-        res.send('You are not logged in!')
+        res.send('You are not logged in!');
     }
 });
 
