@@ -13,6 +13,7 @@ var config = {
     password: process.env.DB_PASSWORD //Use the Environment variable called DB_PASSWORD
     
 }
+
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
