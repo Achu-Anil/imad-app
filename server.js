@@ -70,6 +70,7 @@ app.get('/hash/:input',function(req,res) {
 
 app.post('/create-user', function(req,res) {
     //username and password taken as input
+    //{"username":"achuanilsms", "password":"password0"}
     //JSON
     var username = req.body.username;
     var password = req.body.password;
