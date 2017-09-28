@@ -9,7 +9,7 @@ function loadCommentForm () {
         <input type="submit" id="submit" value="Submit" />
         <br/>
         `;
-        
+
     document.getElementById('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
@@ -82,7 +82,7 @@ function loadComments () {
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
-                    </div>`;
+                    </daiv>`;
                 }
                 comments.innerHTML = content;
             } else {
