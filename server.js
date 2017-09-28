@@ -23,7 +23,7 @@ app.use(session({
     cookie: {maxAge: 1000*60*60*24*30}
 }));
 
-/*function createTemplate(data) {
+function createTemplate(data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
@@ -57,7 +57,7 @@ app.use(session({
     </html>
     `;
     return htmlTemplate;
-}                                                                                   */
+}                                                                               
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
